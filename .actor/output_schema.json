@@ -1,0 +1,106 @@
+{
+  "title": "Code Explainer Output",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "code": {
+      "title": "Code",
+      "type": "string",
+      "description": "The original code that was explained",
+      "editor": "textarea"
+    },
+    "language": {
+      "title": "Programming Language",
+      "type": "string",
+      "description": "The programming language of the code",
+      "editor": "textfield"
+    },
+    "summary": {
+      "title": "Summary",
+      "type": "string",
+      "description": "High-level summary of what the code does",
+      "editor": "textarea"
+    },
+    "explanation": {
+      "title": "Detailed Explanation",
+      "type": "string",
+      "description": "Detailed explanation of the code's functionality",
+      "editor": "textarea"
+    },
+    "lineByLine": {
+      "title": "Line-by-Line Analysis",
+      "type": "array",
+      "description": "Line-by-line breakdown of important code sections",
+      "editor": "json",
+      "items": {
+        "type": "object",
+        "properties": {
+          "lineNumber": {
+            "type": "integer",
+            "description": "Line number in the code"
+          },
+          "code": {
+            "type": "string",
+            "description": "The code snippet"
+          },
+          "explanation": {
+            "type": "string",
+            "description": "Explanation of this line"
+          }
+        }
+      }
+    },
+    "concepts": {
+      "title": "Programming Concepts",
+      "type": "array",
+      "description": "Key programming concepts used in the code",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dependencies": {
+      "title": "Dependencies",
+      "type": "array",
+      "description": "Libraries and dependencies used",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "examples": {
+      "title": "Usage Examples",
+      "type": "array",
+      "description": "Example usage scenarios for the code",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "complexity": {
+      "title": "Code Complexity",
+      "type": "string",
+      "description": "Assessment of the code's complexity level",
+      "editor": "textfield"
+    },
+    "cost": {
+      "title": "API Cost",
+      "type": "number",
+      "description": "Total API cost in USD",
+      "editor": "number"
+    },
+    "chargePrice": {
+      "title": "Charge Price",
+      "type": "number",
+      "description": "Price charged to user in USD",
+      "editor": "number"
+    },
+    "explainedAt": {
+      "title": "Explained At",
+      "type": "string",
+      "description": "ISO timestamp of when this was explained",
+      "editor": "textfield",
+      "format": "date-time"
+    }
+  }
+}
