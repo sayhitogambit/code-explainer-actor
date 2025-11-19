@@ -1,1 +1,1 @@
-{"actorSpecification": 1, "name": "code-explainer", "title": "AI Code Explainer", "description": "Explain code in natural language using AI. Supports 15+ programming languages.", "version": "1.0.0", "dockerfile": "./Dockerfile", "input": "./.actor/input_schema.json"}
+{"actorSpecification": 1, "name": "code-explainer", "title": "AI Code Explainer", "description": "Explain code in natural language using AI. Supports 15+ programming languages.", "version": "1.0.0", "dockerfile": "./Dockerfile", "input": "./input_schema.json"}
