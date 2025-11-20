@@ -4,11 +4,11 @@
   "schemaVersion": 1,
   "properties": {
     "code": {"title": "Code to Explain", "type": "string", "description": "The code snippet to analyze and explain", "editor": "textarea", "minLength": 10},
-    "language": {"title": "Programming Language", "type": "string", "description": "Programming language of the code", "enum": ["javascript", "python", "java", "cpp", "go", "rust", "typescript", "php"], "default": "javascript"},
-    "detailLevel": {"title": "Detail Level", "type": "string", "description": "Level of detail for the code explanation", "enum": ["brief", "detailed", "beginner-friendly"], "default": "detailed"},
-    "includeExamples": {"title": "Include Examples", "type": "boolean", "description": "Include usage examples in the explanation", "default": false},
-    "model": {"title": "AI Model", "type": "string", "description": "AI model to use for generation", "enum": ["openai/gpt-4o", "anthropic/claude-3.5-sonnet"], "default": "openai/gpt-4o"},
-    "openrouterApiKey": {"title": "OpenRouter API Key", "type": "string", "description": "Your OpenRouter API key from https://openrouter.ai/keys", "isSecret": true}
+    "language": {"title": "Programming Language", "type": "string", "description": "Programming language of the code", "editor": "select", "enum": ["javascript", "python", "java", "cpp", "go", "rust", "typescript", "php"], "default": "javascript"},
+    "detailLevel": {"title": "Detail Level", "type": "string", "description": "Level of detail for the code explanation", "editor": "select", "enum": ["brief", "detailed", "beginner-friendly"], "default": "detailed"},
+    "includeExamples": {"title": "Include Examples", "type": "boolean", "description": "Include usage examples in the explanation", "editor": "checkbox", "default": false},
+    "model": {"title": "AI Model", "type": "string", "description": "AI model to use for generation", "editor": "select", "enum": ["openai/gpt-4o", "anthropic/claude-3.5-sonnet"], "default": "openai/gpt-4o"},
+    "openrouterApiKey": {"title": "OpenRouter API Key", "type": "string", "description": "Your OpenRouter API key from https://openrouter.ai/keys", "editor": "textfield", "isSecret": true}
   },
   "required": ["code", "language", "openrouterApiKey"]
 }
